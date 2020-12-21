@@ -1,0 +1,50 @@
+id,name,parent_id
+101,Xã hội,1
+102,Thế giới,1
+103,Tình yêu,2
+104,Nóng trên mạng,2
+105,Âm nhạc,3
+106,Điện ảnh,3
+107,Showbiz Việt,3
+108,Sao quốc tế,3
+109,Bóng đá,4
+110,Quần Vợt,4
+111,Bên lề Thể thao,4
+112,Thị trường,5
+113,Tài chính - ngân hàng,5
+114,Chứng khoán,5
+115,Bất động sản,5
+116,Thế giới doanh nhân,5
+117,Câu chuyện doanh nghiệp,5
+118,Hình sự,6
+119,An ninh trật tự,6
+120,Hồ sơ vụ án,6
+121,Tư vấn luật,6
+122,PC/đồ chơi số,7
+123,Thiết bị di động,7
+124,Viễn thông - internet,7
+125,Game,8
+126,Khoa học,9
+127,Lịch sử,9
+128,Có thể bạn chưa biết,9
+129,Du học,10
+130,Học ngoại ngữ,10
+131,Gương mặt trẻ nổi bật,10
+132,Dinh dưỡng,11
+133,Các bệnh thường gặp,11
+134,Đột phá y học,11
+135,Rèn luyện thể chất,11
+136,Nuôi con,11
+137,Ẩm thực,12
+138,Du lịch,12
+139,Nhà đẹp,12
+140,Mua sắm - tiêu dùng,12
+141,Ô tô xe máy,13
+142,Quân sự,14
+143,Chuyện Lạ,15
+144,Hài hước,15
+145,Quizz - Tử vi,15
+146,Làm đẹp,16
+147,Xu hướng,16
+148,Mặc đẹp,16
+149,Tin thời trang,16
