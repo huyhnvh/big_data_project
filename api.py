@@ -24,6 +24,7 @@ def process_classify():
                 "status": 1,
                 "code": 200,
                 "data": {
+                    'text': '',
                     "cate_id": '150',
                     "cate_name": 'Text khác',
                     }
@@ -32,12 +33,13 @@ def process_classify():
             return jsonify(rs)
 
         if content is not None:
-            id_label, name_label, id_parent = classification.process(content)
+            id_label, name_label = classification.process(content)
             print(str(id_label)+','+name_label)
             rs = {
                 "status": 1,
                 "code": 200,
                 "data": {
+                    'text': content,
                     "cate_id": str(id_label),
                     "cate_name": name_label,
                     }
@@ -47,6 +49,7 @@ def process_classify():
                 "status": 1,
                 "code": 200,
                 "data": {
+                    'text': '',
                     "cate_id": '',
                     "cate_name": '',
                     }
@@ -72,4 +75,4 @@ def process_list():
     return jsonify(rs)
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0', port= 5500,debug=True)
+    app.run(host = '0.0.0.0', port= '8000',debug=True)
