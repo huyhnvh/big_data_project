@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, request, jsonify
 import pandas as pd
-# import classification
+import classification
 import logging
 
 LOGGER = logging.getLogger(__name__)
 app = Flask(__name__)
  
-'''@app.route('/TextClassification', methods=['POST'])
+@app.route('/TextClassification', methods=['POST'])
 def process_classify():
     try:
         if "text" not in request.form:
@@ -55,7 +55,7 @@ def process_classify():
     except Exception as e:
         LOGGER.exception("Have error while classify text for news")
         return jsonify(dict(status=0, code = 500, msg = "error!"))
-'''
+
 @app.route('/list_cate', methods=['GET'])
 def process_list():
     df = pd.read_csv('category_infor.csv')
