@@ -44,7 +44,7 @@ def process(list_text, text_id):
     people = rdd.map(lambda x: Row(id_new =x[0], cate_id = int(x[1]), cate_name = x[2]))
     df = sqlContext.createDataFrame(people)
     print(df.show())
-#     df.write.csv("hdfs://namenode:9000/result/cate_table.csv")
+    df.write.save(path="hdfs://namenode:9000/results/category_table.csv", format='csv', mode='append', sep=',')
     return len(l) 
 
 
