@@ -13,7 +13,8 @@ def process_classify():
         if "text" not in request.form:
             LOGGER.warn("Missing text field in form-data")
             return jsonify(dict(status=0, code = 400, msg = "input miss text field"))
-        content = request.form["text"]
+        content = request.form["text"].split('#$')
+        id_news = request.form["id"].split('#$')
         
     except Exception as e:
         LOGGER.exception("Have error while get input classify text for news")
@@ -23,36 +24,24 @@ def process_classify():
             rs = {
                 "status": 1,
                 "code": 200,
-                "data": {
-                    'text': '',
-                    "cate_id": '150',
-                    "cate_name": 'Text khác',
-                    }
+                "size": "---"
             }
             print(rs)
             return jsonify(rs)
 
         if content is not None:
-            id_label, name_label = classification.process(content)
-            print(str(id_label)+','+name_label)
+            size = classification.process(content,id_news)
+#             print(str(id_label)+','+name_label)
             rs = {
                 "status": 1,
                 "code": 200,
-                "data": {
-                    'text': content,
-                    "cate_id": str(id_label),
-                    "cate_name": name_label,
-                    }
+                "size": size
             }
         else:
             rs = {
                 "status": 1,
                 "code": 200,
-                "data": {
-                    'text': '',
-                    "cate_id": '',
-                    "cate_name": '',
-                    }
+                "size": "---"
             }
         return jsonify(rs)
     except Exception as e:
