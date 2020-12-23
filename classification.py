@@ -23,9 +23,9 @@ l = []
 
 
 def process(list_text, text_id):
-    S = []
-    for i in list_text:
-        S.append(ViTokenizer.tokenize(i))
+    S = list_text
+#     for i in list_text:
+#         S.append(ViTokenizer.tokenize(i))
 #     df_input = spark.createDataFrame([(1, S),],['id','all_token'])
 #     df_output = model.transform(df_input)
 #     label_id = df_output.select('prediction').rdd.flatMap(lambda x: x).collect()[0]
